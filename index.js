@@ -14,5 +14,5 @@ app.use('/',hostelRoutes)
 
 app.listen(3020, async () => {
     await connectDB();
-    console.log("result");
+    console.log("http://localhost:3020");
 })
