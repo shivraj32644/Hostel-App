@@ -11,8 +11,6 @@ app.use(express.json())
 app.use(authMiddleware)
 app.use('/auth', userRoutes);
 app.use('/',hostelRoutes)
-// 
-// connectDB().then(res=>console.log(res)).catch(err=>console.log(err))
 
 app.listen(3020, async () => {
     await connectDB();
