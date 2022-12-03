@@ -45,6 +45,20 @@ export const deleteHostel =async (req,res) => {
     }
 }
 
-export const editHostelDetail = async () => {
-    
+export const patchHostelDetail = async (req,res) => {
+    try {
+        const { id } = req.params.id
+        const body = req.body;
+        let result = await hostelModel.findByIdAndUpdate(id, body,{new:true})
+        return res.status(200).send({
+            status: "success",
+            "message": result
+        })
+
+    } catch (error) {
+        return res.status(500).send({
+            status: "Failed",
+            message:"Server Error"
+        })
+    }
 }

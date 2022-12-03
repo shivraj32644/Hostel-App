@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addHostel, deleteHostel } from "../Controller/adminHostel.controller.js";
+import { addHostel, deleteHostel,  patchHostelDetail } from "../Controller/adminHostel.controller.js";
 import { fetchOneHostel, getHostel } from "../Controller/UserHostel.controller.js";
 import { hostelModel } from "../Database/hostel.model.js";
 
@@ -10,4 +10,4 @@ hostelRoutes.get('/', getHostel)
 hostelRoutes.get('/hostel/:id',fetchOneHostel)
 hostelRoutes.post('/hostel/add',addHostel)
 hostelRoutes.delete('/hostel/:id',deleteHostel)
-hostelRoutes.patch('/hostel/:id',deleteHostel)
+hostelRoutes.patch('/hostel/:id',patchHostelDetail)
