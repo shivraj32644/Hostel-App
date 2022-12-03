@@ -30,8 +30,17 @@ export const addHostel = async (req, res) => {
 export const deleteHostel =async () => {
     try {
         const { id } = req.params.id
-        let result = await hostelModel.findById(id)
+        let result = await hostelModel.findByIdAndDelete(id,{new:true});
+        console.log("Deleted Item ",result);
+        return res.status(200).send({
+            status: "success",
+            "message": {}
+        })
+
     } catch (error) {
-        
+        return res.status(500).send({
+            status: "Failed",
+            message:"Server Error"
+        })
     }
 }
