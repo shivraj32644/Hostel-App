@@ -28,5 +28,9 @@ export const addHostel = async (req, res) => {
 
 
 export const deleteHostel = () => {
-    
+    try {
+        const {id}= req.params.id
+    } catch (error) {
+        
+    }
 }
