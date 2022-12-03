@@ -27,9 +27,10 @@ export const addHostel = async (req, res) => {
 }
 
 
-export const deleteHostel = () => {
+export const deleteHostel =async () => {
     try {
-        const {id}= req.params.id
+        const { id } = req.params.id
+        let result = await hostelModel.findById(id)
     } catch (error) {
         
     }
