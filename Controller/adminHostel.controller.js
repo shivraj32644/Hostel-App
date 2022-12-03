@@ -27,7 +27,7 @@ export const addHostel = async (req, res) => {
 }
 
 
-export const deleteHostel =async () => {
+export const deleteHostel =async (req,res) => {
     try {
         const { id } = req.params.id
         let result = await hostelModel.findByIdAndDelete(id,{new:true});
@@ -43,4 +43,8 @@ export const deleteHostel =async () => {
             message:"Server Error"
         })
     }
+}
+
+export const editHostelDetail = async () => {
+    
 }
