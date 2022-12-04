@@ -4,6 +4,10 @@ import { Navbar } from "../Components/Navbar";
 import { Highlight } from "@chakra-ui/react";
 import logo from '../Assets/hostel.png'
 import { Divider } from '@chakra-ui/react'
+import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 export const Login = () => {
   return (
     <>
@@ -47,17 +51,21 @@ export const Login = () => {
 
           </Box>
           <Box>
-            <Box>
-              <Divider />
-              <p>Login with</p>
-              <Divider />
+            <Box
+              display={'flex'}
+              alignItems="center"
+              justifyContent={'space-between'}
+            >
+              <Divider w='33%' bg={"blue"} h={'1px'} borderRadius='10px' />
+              <p style={{w:"33.33%"}} >Or Login With ...</p>
+              <Divider  w='33%' bg={"blue"} h={'1px'} borderRadius='10px'/>
             </Box>
 
           </Box>
           <Box>
-            <Button>Github</Button>
-            <Button>Google</Button>
-            <Button>Facebook</Button>
+            <Button className="btn" > <FcGoogle/> Google</Button>
+            <Button className="btn" > <FaGithub/> Github</Button>
+            <Button className="btn" > <FaFacebookSquare/> Facebook</Button>
           </Box>
         </Box>
       </Box>
