@@ -30,7 +30,7 @@ export const Navbar = () => {
       justifyContent={"space-evenly"}
     >
       {data?.map((e) => (
-        <NavLink to={e.to} className={({isActive})=>isActive? styles.active :styles.default} >{e.title}</NavLink>
+        <NavLink key={e.title} to={e.to} className={({isActive})=>isActive? styles.active :styles.default} >{e.title}</NavLink>
       ))}
     </Box>
   );

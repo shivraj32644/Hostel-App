@@ -8,39 +8,69 @@ import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
+import styles from '../styles/login.module.css'
 export const Login = () => {
   return (
     <>
       <Navbar></Navbar>
       <Box
-        display="flex"
-        alignItems={"center"}
-        justifyContent={"center"}
+        // display="flex"
+        // alignItems={"center"}
+        // justifyContent={"center"}
         height="90vh"
-        border={"5px solid black"}
+        pt={'50px'}
+        className={styles.container}
+        // pb='500px'
+        // border={"5px solid black"}
+        
+        
       >
-        <Box>
-          <Box
+        <Box
           
-            display={'flex'}
-            alignItems='center'
-            justifyContent={'center'}
+          display={'flex'}
+          alignItems='center'
+          justifyContent={'center'}
+          pb='50px'
+        >
+            <img src={logo} alt="logo" />
+          <Heading lineHeight="tall">
+            <Highlight
+              query="Hostel Buddy"
+              styles={{ px: "2", py: "1", rounded: "full", color: " #25acca " }}
+            >
+              Hostel Buddy
+            </Highlight>
+          </Heading>
+        </Box>
+        <Box
+          // border={"5px solid black"}
+          width='30%'
+          margin='auto'
+          height={'500px'}
+          p={'20px'}
+        
+        >
+          
+          <Box
+          display={'flex'}
+          alignItems='center'
+          justifyContent={'space-between'}
+            flexWrap='wrap'
+            pb={'10px'}
           >
-              <img src={logo} alt="logo" />
-            <Heading lineHeight="tall">
-              <Highlight
-                query="Hostel Buddy"
-                styles={{ px: "2", py: "1", rounded: "full", color: " #25acca " }}
-              >
-                Hostel Buddy
-              </Highlight>
-            </Heading>
-          </Box>
-          <Box>
             <h1>Login</h1>
             <Link to='/register'>No Account Yet ?</Link>
           </Box>
-          <Box>
+          <Box
+          display={'flex'}
+            // alignItems=''
+            flexDirection={'column'}
+            width='100%'
+            justifyContent={'center'}
+            gap='10px'
+            pb={'20px'}
+          
+          >
             <Input placeholder="Enter Email" />
             <Input placeholder="Enter Password" />
             <Box>
@@ -55,17 +85,28 @@ export const Login = () => {
               display={'flex'}
               alignItems="center"
               justifyContent={'space-between'}
+              pb='20px'
             >
-              <Divider w='33%' bg={"blue"} h={'1px'} borderRadius='10px' />
-              <p style={{w:"33.33%"}} >Or Login With ...</p>
-              <Divider  w='33%' bg={"blue"} h={'1px'} borderRadius='10px'/>
+              <Divider w='30%' bg={"black"} h={'1px'} borderRadius='10px' />
+              <p style={{w:"30.33%"}} >Or Login With ...</p>
+              <Divider  w='30%' bg={"black"} h={'1px'} borderRadius='10px'/>
             </Box>
 
           </Box>
-          <Box>
-            <Button className="btn" > <FcGoogle/> Google</Button>
-            <Button className="btn" > <FaGithub/> Github</Button>
-            <Button className="btn" > <FaFacebookSquare/> Facebook</Button>
+          <Box
+          display={'flex'}
+          alignItems='center'
+          justifyContent={'space-evenly'}
+          columnGap='5px'
+            
+          >
+            <Button className={styles.btn}
+              display='flex' alignItems={'center'}
+              justifyContent='center'
+              
+            > <FcGoogle /> Google</Button>
+            <Button className={styles.btn} > <FaGithub/> Github</Button>
+            <Button className={styles.btn}> <FaFacebookSquare/> Facebook</Button>
           </Box>
         </Box>
       </Box>

@@ -10,7 +10,7 @@ export const Home = () => {
     }, [])
     
    async function fetchData() {
-        let res = await fetch(`http://localhost:3020/`)
+        let res = await fetch(`http://localhost:9020/`)
        let result = await res.json();
        setData(result);
     }
@@ -26,7 +26,7 @@ export const Home = () => {
           pb='80px'
           gap='20px'
       maxW='80%'>
-          {
+          {/* {
               data?.map((e) => (
                   <Box 
                 //   border='1px solid black'
@@ -44,7 +44,7 @@ export const Home = () => {
                       <p>Rating: {e.rating }</p>
                   </Box>
               ))
-            }
+            } */}
       </Container>
       </>
   )

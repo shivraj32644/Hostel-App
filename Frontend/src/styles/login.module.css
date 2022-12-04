@@ -1,0 +1,13 @@
+.container{
+    /* background-image: url("https://images.pexels.com/photos/250659/pexels-photo-250659.jpeg?auto=compress&cs=tinysrgb&w=600"); */
+}
+
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 32%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
