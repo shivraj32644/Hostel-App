@@ -13,7 +13,7 @@ export const Navbar = () => {
       title: "Signup",
     },
     {
-      to: "/about us",
+      to: "/about",
       title: "About Us",
     },
     {
