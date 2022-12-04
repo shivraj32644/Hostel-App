@@ -12,7 +12,7 @@ app.use(authMiddleware)
 app.use('/auth', userRoutes);
 app.use('/',hostelRoutes)
 
-app.listen(3020, async () => {
+app.listen(9020, async () => {
     await connectDB();
-    console.log("http://localhost:3020");
+    console.log("http://localhost:9020");
 })

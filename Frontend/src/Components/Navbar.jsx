@@ -2,6 +2,25 @@ import React from 'react'
 import { Box } from '@chakra-ui/react'
 import { NavLink } from "react-router-dom";
 export const Navbar = () => {
+  const data = [
+    {
+    to: '/',
+    title:"Home"
+  },
+    {
+    to: '/register',
+    title:"Signup"
+  }
+    {
+    to: '/about us',
+    title:"About Us"
+  },
+    {
+    to: '/contact',
+    title:"Contact"
+  }
+  
+  ]
   return (
     <Box
       display={'flex'}
@@ -11,15 +30,15 @@ export const Navbar = () => {
       justifyContent={'space-evenly'}
     
     >
-      <NavLink to='/'>
-          Home
-      </NavLink>
-      <NavLink to='/register'>
-          Signup
-      </NavLink>
-      <NavLink to='/login'>
-          Login
-      </NavLink>
+      {
+        data?.map((e) => (
+          <NavLink to={e.to} >
+            {e.title}
+          </NavLink>
+        ))
+      }
+      
+      
       </Box>
   )
 }
