@@ -1,8 +1,8 @@
-import { ERROR, FETCH_ADMIN_DATA, FETCH_USER_DATA, LOADING } from "./action";
+
+import { ERROR, LOADING,FETCH_DATA } from "./action.home";
 
 const initStore = {
-  adminData: [],
-  userData: [],
+  home: [],
   loading: false,
   error: false,
 };
@@ -10,12 +10,10 @@ const initStore = {
 export const reducer = (store = initStore, action) => {
   let { type, payload } = action;
   switch (type) {
-    case FETCH_ADMIN_DATA: {
-      return { ...store, adminData: payload };
+    case FETCH_DATA: {
+      return { ...store, home: payload };
     }
-    case FETCH_USER_DATA: {
-      return { ...store, userData: payload };
-    }
+    
     case LOADING: {
       return { ...store, loading: payload };
     }

@@ -6,18 +6,23 @@ export const hostelSchema = mongoose.Schema({
         require:true
     },
     location: {
-        type: String,
-        require:true
+        cityName: String,
+        stateName: String,
+        streetName: String,
+        postalCode: String,
+        
     },
     type: {
         type: String,
         require: true,
         enum:["Boys","Girls","Both"]
     },
+    postedDate:{ type: Date, default: Date.now },
+    
     rating: {
         type:Number
     },
-    total_seats: {
+    available_rooms: {
         type: Number,
         require:true
     },

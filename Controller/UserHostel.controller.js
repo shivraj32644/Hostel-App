@@ -3,7 +3,7 @@ import { hostelModel } from "../Database/hostel.model.js";
 
 export const getHostel = async (req, res) => {
     try {
-        if (req.user) {
+        
             var data = await hostelModel.find();
             let { sort, order, location, type } = req.query;
             let filters = req.query;
@@ -21,12 +21,7 @@ export const getHostel = async (req, res) => {
                 data = await hostelModel.find(filters).sort({[sort]: order})
             }
             return res.send(data);
-        } else {
-            return res.status(404).send({
-                status: "Failed",
-                message:"User Not Found"
-            })
-        }
+        
        
     } catch (error) {
         return res.status(500).send({
