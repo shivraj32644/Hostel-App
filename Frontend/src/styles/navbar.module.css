@@ -1,7 +1,22 @@
 .active{
-    background: #000;
-    color: #fff;
+    background: #71d1ef;
+    /* color: #fff; */
+    padding: 5px;
+    width: 20%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 700;
 }
 .default{
     background: #fff;
+    width: 20%;
+    border: 1px solid #71d1ef;
+    display: flex;
+    padding: 5px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
 }

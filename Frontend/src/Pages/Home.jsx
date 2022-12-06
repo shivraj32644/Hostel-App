@@ -15,7 +15,7 @@ export const Home = () => {
     dispatch(fetchHomeData({}))
   }, [])
  
-
+  console.log(home)
   if (loading) {
     return (<Center
     maxW={'80%'}
@@ -52,8 +52,8 @@ export const Home = () => {
           pb='80px'
           gap='20px'
       maxW='80%'>
-          {/* {
-              data?.map((e) => (
+          {
+              home?.map((e) => (
                   <Box 
                 //   border='1px solid black'
                       w='300px'
@@ -70,7 +70,7 @@ export const Home = () => {
                       <p>Rating: {e.rating }</p>
                   </Box>
               ))
-            } */}
+            }
       </Container>
       </>
   )

@@ -59,7 +59,7 @@ export const Login = () => {
             pb={'10px'}
           >
             <h1>Login</h1>
-            <Link to='/register'>No Account Yet ?</Link>
+            <Link style={{color:"blue"}} to='/register'>No Account Yet ?</Link>
           </Box>
           <Box
           display={'flex'}
