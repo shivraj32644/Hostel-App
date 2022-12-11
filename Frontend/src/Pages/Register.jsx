@@ -19,16 +19,10 @@ export const Register = () => {
     <>
       <Navbar />
       <Box
-        // display="flex"
-        // alignItems={"center"}
-        // justifyContent={"center"}
         height="90vh"
         pt={'50px'}
         className={styles.container}
-        // pb='500px'
-        // border={"5px solid black"}
-        
-        
+ 
       >
         <Box
           
