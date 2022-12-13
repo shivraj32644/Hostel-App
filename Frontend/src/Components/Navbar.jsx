@@ -15,7 +15,6 @@ export const Navbar = () => {
       large: false,
     }
   )
-  console.log(variant);
   const data = [
     {
       to: "/",

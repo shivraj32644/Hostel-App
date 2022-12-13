@@ -15,7 +15,9 @@ export const userSchema = mongoose.Schema({
     password: {
         type: String,
         require:true
-    }
+    },
+    favorite: [String],
+    booked:[String]
 })
 
 export const userModel = mongoose.model("users",userSchema)
